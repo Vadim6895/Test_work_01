@@ -16,19 +16,6 @@ if ((process.env.NODE_ENV || '').trim() === 'production') {
   sourceMap = false;
 }
 
-// const generateHtmlPlugins = () => {
-//   const pages = fs.readdirSync('./src');
-//   const htmlPageNames = pages.filter((page) => page.split('.')[1] === 'html');
-
-//   return htmlPageNames.map((fileName) => {
-//     const [name, extension] = fileName.split('.');
-//     return new HtmlWebpackPlugin({
-//       template: `./src/${name}.${extension}`,
-//       filename: `${name}.${extension}`,
-//     });
-//   });
-// };
-
 const plugins = [
   mode === 'development' && new ReactRefreshWebpackPlugin(),
   new Dotenv(),
@@ -57,7 +44,7 @@ const plugins = [
       progressive: true,
     },
   }),
-]; // .concat(generateHtmlPlugins());
+];
 
 module.exports = {
   mode,
@@ -145,27 +132,6 @@ module.exports = {
           filename: 'fonts/[name][ext]',
         },
       },
-      // {
-      //   test: /\.(ts|tsx|js)/,
-      //   exclude: /node_modules/,
-      //   resolve: {
-      //     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-      //   },
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: [
-      //         '@babel/preset-env',
-      //         '@babel/preset-react',
-      //         '@babel/preset-typescript',
-      //       ],
-      //       cacheDirectory: true,
-      //       plugins: [
-      //         mode === 'development' && require.resolve('react-refresh/babel'),
-      //       ].filter(Boolean),
-      //     },
-      //   },
-      // },
       {
         test: /\.(ts|tsx|js|jsx)/,
         exclude: /node_modules/,
