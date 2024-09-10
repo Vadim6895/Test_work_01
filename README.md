@@ -1,7 +1,7 @@
 # Тестовое задание
 
 # Ссылка на деплой проекта в gh-pages
-https://vadim6895.github.io/Test_work_01/#/
+https://vadim6895.github.io/Test_work_01/
 
 ## Установка
 
