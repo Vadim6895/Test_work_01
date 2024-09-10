@@ -1,0 +1,12 @@
+@use "../vendors/normalize.min.css";
+
+// base styles
+@use "font-face";
+@use "global";
+@use "common";
+
+// blocks
+@use "./blocks/header";
+@use "./blocks/breadcrumbs";
+@use "./blocks/news";
+@use "./blocks/form";

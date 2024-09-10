@@ -1,0 +1,151 @@
+@use "../../scss/common" as *;
+@use "../../scss/variables" as *;
+
+.header {
+  &__logo {
+    @include font(32px, 1.22, 700);
+
+    margin: 0;
+    padding: 0;
+    color: $white;
+
+    @media (min-width: $xxl) {
+      @include font(48px, 1.23, 700);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 18px;
+
+    @media (min-width: $xxl) {
+      padding-top: 25px;
+      padding-bottom: 23px;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: 1px solid $white;
+    border-radius: 100%;
+
+    @media (min-width: $xxl) {
+      margin-left: 273px;
+      width: 460px;
+      height: 60px;
+      border: none;
+    }
+
+    svg {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 14px;
+      height: 14px;
+
+      @media (min-width: $xxl) {
+        width: 20px;
+        height: 20px;
+        left: 26px;
+        top: 20px;
+      }
+    }
+
+    input {
+      @include font(16px, 1.25, 600);
+
+      background-color: $bckg-color;
+      border: 2px solid $white;
+      border-radius: 100px;
+      width: 100%;
+      height: 100%;
+      padding-left: 70px;
+      color: $white;
+      letter-spacing: 1px;
+      display: none;
+
+      &:focus {
+        outline: 1px solid orange;
+      }
+
+      &::placeholder {
+        color: $white;
+      }
+
+      @media (min-width: $xxl) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    @media (min-width: $xxl) {
+      margin-left: auto;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    margin-left: 10px;
+
+    @media (min-width: $xxl) {
+      margin-left: 30px;
+    }
+
+    &--login,
+    &--charge {
+      display: none;
+
+      @media (min-width: $xxl) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav-link,
+  &__burger-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border-color: $white;
+    }
+
+    @media (min-width: $xxl) {
+      width: 70px;
+      height: 70px;
+      padding: 14px;
+      border-color: $nav-link-color;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      @media (min-width: $xxl) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__decor-line {
+    width: 100%;
+    height: 2px;
+    background-color: $grey;
+    border-radius: 8px;
+  }
+}

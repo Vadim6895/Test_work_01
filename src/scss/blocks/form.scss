@@ -1,0 +1,78 @@
+@use "../../scss/common" as *;
+@use "../../scss/variables" as *;
+
+.registration {
+  &__form {
+    width: 1000px;
+    margin: 0 auto;
+    border: 2px solid $white;
+    border-radius: 20px;
+    padding: 52px 25px 50px;
+  }
+
+  &__title {
+    @include font(40px, 1.23, 700);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: end;
+  }
+
+  &__desc {
+    @include font(24px, 1.21, 400);
+
+    margin: 0;
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__label {
+    @include font(20px, 1.2, 700);
+
+    display: block;
+    margin-top: 50px;
+  }
+
+  &__input {
+    @include font(16px, 1.2, 600);
+
+    display: block;
+    margin-top: 15px;
+    border-radius: 100px;
+    width: 460px;
+    padding: 18px 0 18px 30px;
+    background-color: $bckg-color;
+    border: 2px solid $white;
+    color: $white;
+
+    &--error {
+      border-color: $error-color;
+    }
+
+    &-message {
+      @include font(16px, 1.2, 400);
+
+      color: $error-color;
+      position: absolute;
+    }
+  }
+
+  &__submit-btn {
+    @include font(20px, 1.2, 700);
+
+    background-color: $white;
+    color: #000;
+    width: 460px;
+    border-radius: 100px;
+    padding: 18px 0;
+    margin-left: 26px;
+
+    &:disabled {
+      background-color: $grey;
+      cursor: default;
+    }
+  }
+}
